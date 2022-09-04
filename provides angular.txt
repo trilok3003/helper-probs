@@ -1,0 +1,4 @@
+The useClass is a class provider that creates and returns new instance of specified class
+useExisting is an alias provider that maps one token to another.
+The useValue is value provider that returns a fixed value for dependency injection
+The useFactory configures a factory provider that returns object for dependency injection

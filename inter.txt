@@ -1,0 +1,8 @@
+behaviorsubject vs subject
+A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject doesn't hold a value. 
+
+Promises Vs observables
+
+Promises deal with one asynchronous event at a time, while observables handle a sequence of asynchronous events over a period of time.
+
+https://www.syncfusion.com/blogs/post/angular-promises-versus-observables.aspx

@@ -1,0 +1,10 @@
+https://www.digitalocean.com/community/tutorials/overriding-vs-overloading-in-java
+1. What is Overloading and Overriding?
+When two or more methods in the same class have the same name but different parameters, it’s called Overloading. When the method signature (name and parameters) are the same in the superclass and the child class, it’s called Overriding.
+
+2. Overriding vs Overloading
+Overriding implements Runtime Polymorphism whereas Overloading implements Compile time polymorphism.
+The method Overriding occurs between superclass and subclass. Overloading occurs between the methods in the same class.
+Overriding methods have the same signature i.e. same name and method arguments. Overloaded method names are the same but the parameters are different.
+With Overloading, the method to call is determined at the compile-time. With overriding, the method call is determined at the runtime based on the object type.
+If overriding breaks, it can cause serious issues in our program because the effect will be visible at runtime. Whereas if overloading breaks, the compile-time error will come and it’s easy to fix.

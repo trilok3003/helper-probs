@@ -1,0 +1,22 @@
+docDefinition = {
+  footer: function(currentPage, pageCount) { return currentPage.toString() + ' of ' + pageCount; },
+  header: function(currentPage, pageCount, pageSize) {
+    // you can apply any logic and return any valid pdfmake element
+
+    return [
+      { text: 'simple text', alignment: (currentPage % 2) ? 'left' : 'right' },
+      { canvas: [ { type: 'rect', x: 170, y: 32, w: pageSize.width - 170, h: 40 } ] }
+    ]
+  },
+  (...)
+};
+-----------------------
+{
+    //      (left border, top border, right border, bottom border)
+    border: [false, true, false, false],
+    text: 'text in table cell'
+}
+-------
+    watermark: {text: 'test watermark', color: 'blue', opacity: 0.3, font: 'Courier', bold: true, italics: true},
+...
+

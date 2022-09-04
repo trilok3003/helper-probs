@@ -1,0 +1,96 @@
+import { Injectable } from "@angular/core";
+import { Observable, of, EMPTY } from "rxjs";
+import { tap, shareReplay, catchError } from "rxjs/operators";
+
+import { HttpClient, HttpParams } from "@angular/common/http";
+
+@Injectable({
+  providedIn: "root"
+})
+export class ProductService {
+  private readonly URL = "https://world.openfoodfacts.org/api/v0/product/";
+
+  constructor(private http: HttpClient) {}
+
+  cache = {};
+  /**
+   * Naive approach of storing return value
+   *
+   * we put the value into the cache asynchronously,
+   * and all asynchronous code will be executed
+   * after the synchronous code.
+   *
+   * What if we call the resolve function in
+   * a for loop or in *ngFor or just have several components using it
+   * within the same template?
+   * It turns out that our cache doesn’t do its job:
+   */
+  // resolveProduct(code: string): Observable<any> {
+  //   if (this.cache[code]) {
+  //     console.log('Returning cached value!')
+  //     return of(this.cache[code])
+  //   }
+  //   console.log('Do the request again')
+  //   this.http.get(this.URL+code+'.json').pipe(
+  //     tap(resolvedValue => {
+  //         this.cache[code] = resolvedValue;
+  //     }));
+  // }
+
+  /**
+   * Less Naïve Version — Cache the Observable Itself
+   *
+   * Instead of caching the return values from the server,
+   * we can cache the observables
+   * that the Angular HttpClient service returns.
+   *
+   * This way, both function calling and caching will be synchronous.
+   * The only trick is that we must use the
+   * shareReplay operator that will allow the subscribers
+   * to view the result of the HTTP call.
+   *
+   * Without shareReplay, the observable will be kept
+   * in the FINISHED state after the request,
+   * and the new subscribers will not be able to get its value.
+   */
+  resolveProduct(code: string): Observable<any> {
+    if (this.cache[code]) {
+      console.log("Returning cached value!");
+      return this.cache[code];
+    }
+
+    console.log("Do the request again");
+    this.cache[code] = this.http.get(this.URL + code + ".json").pipe(
+      shareReplay(1),
+      catchError(err => {
+        delete this.cache[code];
+        return EMPTY;
+      })
+    );
+  }
+}
+
+/**
+ * ANALYSIS
+ * ========
+ * |||| PROS ||||
+ * This particular caching approach is called memoization and it will
+ * serve you well in the following cases:
+ *
+ * 1) The user asks for the same information a lot of times.
+ * 2) This information on a server is stable by nature. Use it for
+ * vocabularies, translations, lookup services.
+ * 3) Your application is not supposed to run
+ * for many days without reload.
+ *
+ * |||| CONS ||||
+ * All shortcomings of the memoization have a common reason,
+ * that is, we never clean our cached values.
+ * With that in mind, here are some restrictions:
+ *
+ * 1) Don’t use this caching method for checking real-time information:
+ * prices of stocks, weather, Twitter feed, etc. It simply won’t work.
+ * 2) Don’t use this caching method if you expect your application to run
+ * for months and years without reload, because the cache size will
+ * become terribly big and you will have memory leaks.
+ */

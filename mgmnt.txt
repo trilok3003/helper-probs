@@ -1,0 +1,10 @@
+Inventory/Sales Management
+Gps Management
+Attendance
+Tracker
+CRM
+Health
+Store
+HCM
+Learning
+Student

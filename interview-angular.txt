@@ -1,0 +1,8 @@
+ng build	 ng build --prod
+ environment.ts - will be used	 environment.prod.ts
+ source map will be generated	 source map will not generate
+ No Uglification	 Uglification
+ No Tree shaking	 Tree shaking
+ No AOT	 AOT Enabled
+ No Bundling	 Bundling
+
