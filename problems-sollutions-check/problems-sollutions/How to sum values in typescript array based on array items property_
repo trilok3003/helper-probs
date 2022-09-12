@@ -1,0 +1,2 @@
+const sum = receiptItems.filter(item => item.tax === '25.00')
+                        .reduce((sum, current) => sum + current.total, 0);

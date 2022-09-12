@@ -1,0 +1,8 @@
+4 types rate check api 
+loader updated all modules where needed
+scroll on arrows directive
+form progress percentage
+custom on off toggle
+focus on invalid field
+
+search component

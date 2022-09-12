@@ -1,0 +1,20 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'pagerPipe'
+})
+export class PagerPipe implements PipeTransform {
+
+  transform(array: any[], pager: Pager): any {
+    var start = (pager.activePage-1)*pager.pageSize;
+    var end = pager.activePage*pager.pageSize;
+    console.log(start,end);
+    return array.slice(start,end);
+  }
+
+};
+//--------------------------------------------------------------------------
+export class Pager {
+  pageSize:number;
+  activePage:number;
+};

@@ -1,0 +1,68 @@
+mport { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
+  baseUrl ="https://code-sample.com/";
+  users = null;
+
+ // Inject HttpClient into your component or service.
+  constructor(private http: HttpClient){  }
+
+  //Load User info.
+  ngOnInit(): void {
+     // Make the HTTP request:
+    this.http.get(this.baseUrl +'api/users/').subscribe(data => {
+      this.users = data;
+    },
+    err => {
+      console.log("Error- something is wrong!")
+    });  
+  }
+
+  user ={
+    id: 1,
+    name: 'Anil Singh',
+    user_Id:9979,
+    site : 'https://code-sample.com'
+  }
+
+  ////Setting a header.
+  addUser = function(){
+    //Make the HTTP Post Request
+    this.http.post(this.baseUrl +'api/addUser/', this.user, {
+            headers: new HttpHeaders().set('Authorization', 'Auth_Token')
+        })
+        .subscribe(
+          result => {
+            console.log(result);
+          },
+          err => {
+            console.log("Error- something is wrong!")
+      });
+  }
+
+  //Setting multiple headers.
+  addUserDetail = function(){
+    //Make the HTTP Post Request
+    this.http.post(this.baseUrl +'api/addUserDetail/', this.user, {
+          headers: new HttpHeaders({
+            'Authorization': 'Auth_Token',
+            'RequestToken': 'a36cc2fa-dba4-4d00-a499-8bc129f16d12'
+          })
+        })
+        .subscribe(
+          result => {
+            console.log(result);
+          },
+          err => {
+            console.log("Error- something is wrong!")
+      });
+  }
+}
+
+

@@ -1,0 +1,7 @@
+for(let prop in  this.employeesMonthWise.chart) {   
+     this.employeesMonthWise['chart'][prop].forEach(ele => {     
+        if (ele) {              
+ ele.attendance1 = ele.attendance               
+           }
+           }) 
+      }

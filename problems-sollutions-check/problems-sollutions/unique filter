@@ -1,0 +1,41 @@
+articles = [
+    {
+        ArticleTitle: 'article one',
+        ArticleTags: [
+            {key:0, value:'Back'},
+            {key:1, value:'Shoulder'},
+            {key:2, value:'Injury'},
+            {key:3, value:'Abs'}]
+    },
+    {
+        ArticleTitle: 'article two',
+        ArticleTags: [
+            {key:3, value:'Abs'},
+            {key:1, value:'Shoulder'},
+            {key:4, value:'Leg'},
+            {key:5, value:'Others'}]}
+]
+
+
+import { Pipe, PipeTransform } from '@angular/core';
+@Pipe({
+    name: 'filterUnique',
+    pure: false
+})
+export class FilterPipe implements PipeTransform {
+    transform(value: any, args?: any): any {
+        // Remove the duplicate elements
+        var art = value.map(x=>{
+            return x.ArticleTags.map(y=>{ return y.value;});;
+        }).reduce((acc,ele,i)=>{
+            acc = acc.concat(ele);
+            return acc;
+        });
+        return new Set(art);
+    }
+}
+above pipe returns a set of string containing the value of articletag.
+
+<ul>
+    <li *ngFor="let a of articles | filterUnique">{{a}}</li>
+</ul>

@@ -1,0 +1,156 @@
+import { of, from, interval } from 'rxjs';
+
+import { map, concat, concatMap, mergeMap, switchMap, exhaustMap, delay, tap } from 'rxjs/operators';
+
+import { getFrameworksObservableWithDelay, getAgency } from './utils';
+
+
+
+const frameworkTweetsObservable = getFrameworksObservableWithDelay(['Backbone', 'Angular'])
+
+  .pipe(tap(framework => console.log(`*** ${framework} tweet just popped up! ***`)));
+
+
+
+
+
+// =================== JUST STRINGS =======================
+
+
+
+const plainValuesObservable = frameworkTweetsObservable.pipe(
+
+  map(name => `${name} is awesome!`)
+
+);
+
+
+
+
+
+
+
+// =================== NO FLATTENING =======================
+
+
+
+const unFlattenedObservable = frameworkTweetsObservable.pipe(
+
+  map(framework => getAgency(framework)),
+
+  map(agency => agency.getRecruitsObservable())
+
+);
+
+
+
+
+
+
+
+// =================== mergeMap =======================
+
+
+
+const mergeMapObservable = frameworkTweetsObservable.pipe(
+
+  map(framework => getAgency(framework)),
+
+  mergeMap(agency => agency.getRecruitsObservable())
+
+);
+
+
+
+
+
+
+
+// =================== switchMap =======================
+
+
+
+const switchMapObservable = frameworkTweetsObservable.pipe(
+
+  map(framework => getAgency(framework)),
+
+  switchMap(agency => agency.getRecruitsObservable())
+
+);
+
+
+
+
+
+
+
+// =================== concatMap =======================
+
+
+
+const concatMapObservable = frameworkTweetsObservable.pipe(
+
+  map(framework => getAgency(framework)),
+
+  concatMap(agency => agency.getRecruitsObservable())
+
+);
+
+
+
+
+
+
+
+// =================== exhaustMap =======================
+
+
+
+const exhaustMapObservable = frameworkTweetsObservable.pipe(
+
+  map(framework => getAgency(framework)),
+
+  exhaustMap(agency => agency.getRecruitsObservable())
+
+);
+
+
+
+
+
+
+
+of('BEGINNING').pipe(
+
+  concat(
+
+    of('', '===============', 'PLAIN VALUES:', '===============', ''),
+
+    plainValuesObservable,
+
+    of('', '===============', 'NO FLATTENING:', '===============', '').pipe(delay(1000)),
+
+    unFlattenedObservable,
+
+    of('', '===============', 'MERGE MAP:', '===============', '').pipe(delay(1000)),
+
+    mergeMapObservable,
+
+    of('', '===============', 'SWITCH MAP:', '===============', '').pipe(delay(1000)),
+
+    switchMapObservable,
+
+    of('', '===============', 'CONCAT MAP:', '===============', '').pipe(delay(1000)),
+
+    concatMapObservable,
+
+    of('', '===============', 'EXHAUST MAP:', '===============', '').pipe(delay(1000)),
+
+    exhaustMapObservable
+
+  )
+
+).subscribe(result => console.log(`${result}`));
+
+
+

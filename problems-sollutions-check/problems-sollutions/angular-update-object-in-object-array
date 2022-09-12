@@ -1,0 +1,13 @@
+showUpdatedItem(newItem){
+    let updateItem = this.itemArray.items.find(this.findIndexToUpdate, newItem.id);
+
+    let index = this.itemArray.items.indexOf(updateItem);
+
+
+    this.itemArray.items[index] = newItem;
+
+  }
+
+  findIndexToUpdate(newItem) { 
+        return newItem.id === this;
+  }

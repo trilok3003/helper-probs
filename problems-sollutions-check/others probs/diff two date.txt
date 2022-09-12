@@ -1,0 +1,22 @@
+{
+ "id":1,
+ "name":"Jack",
+ "date":"01-06-2017"
+},
+{
+ "id":2,
+ "name":"Allen",
+ "date":"07-08-2017"
+},
+{
+ "id":3,
+ "name":"Annie",
+ "date":"22-11-2017"
+},
+
+let start = "01-02-2017;
+let end = "06-07-2017";
+
+let.selectedMembers = this.members.filter(
+m => new Date(m.date) >= new Date(startDate) && new Date(m.date) <= new Date(endDate)
+);

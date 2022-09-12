@@ -1,0 +1,57 @@
+import { Component} from '@angular/core';
+import {MatButtonToggleChange} from '@angular/material';
+import {FormBuilder, FormControl, FormArray, FormGroup, FormGroupDirective, NgForm, ValidatorFn, Validators} from '@angular/forms';
+
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: [ './app.component.css' ]
+})
+export class AppComponent{
+  myForm: FormGroup;
+  constructor(private fb: FormBuilder){
+    this.myForm = this.fb.group({
+      sections: this.fb.array([], CustomValidator.checkPercentageSum)
+    });
+    this.addSection();
+  }
+
+  addSection(){
+    let section = this.myForm.get('sections') as FormArray;
+    section.push(this.fb.group({
+      percentage: 0.2,
+    }));
+    section.push(this.fb.group({
+      percentage: 0.3,
+    }));
+    section.push(this.fb.group({
+      percentage: 1,
+    }));
+
+    console.log(this.myForm.valid , this.myForm.get('sections').errors);
+    // Output: false {Invalid: true}
+  }
+
+}
+
+//Custom Validator
+export class CustomValidatorCustomValidator {
+  static checkPercentageSum(sections: FormArray): ValidationResult {
+    if (sections) {
+      let sumOfPercentages: number = 0;
+      sections['controls'].forEach((sectionItem: FormGroup) => {
+        sumOfPercentages = sectionItem['controls'].percentage.value + sumOfPercentages;
+      });
+      
+      if (sumOfPercentages > 1) {
+        return {"Invalid": true};
+      }
+    }
+    return null;
+  }
+}
+
+export interface ValidationResult {
+  [key: string]: boolean;
+}

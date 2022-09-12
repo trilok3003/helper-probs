@@ -1,0 +1,28 @@
+//  every()
+var num = [1,2,3,4,5, 0];
+var isZeroFree = num.every(e => e > 0);
+if(!isZeroFree) {
+    console.log("0 present in array");
+}
+// some
+var names = ["ram", "raj", "rahul"];
+let isRahulPresent = names.some(name => name==="rahul");
+if(isRahulPresent) {
+  console.log("%c found rahul", "color:red"); 
+}
+// reduce
+
+var numbers = [1,2,3,4,5,6,7, 10];
+var result = numbers.reduce((acc, val)=> acc+val, 0);
+
+// var numbers = [1,2,3,4,5, 6, 7]
+var odd = numbers.filter(n => n%2); // single line
+
+// forEach
+
+var names = ["Jack", "Jecci", "Ram", "Tom"];
+names.forEach(name=> print(name));
+// map 
+
+var names = ["Jack", "Jecci", "Ram", "Tom"];
+var upperCaseNames = names.map(name => name.toUpperCase());

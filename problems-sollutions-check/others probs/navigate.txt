@@ -1,0 +1,5 @@
+redirectTo(uri) {
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
+    this.router.navigate([uri]));
+  }
+now you can use like: this.redirectTo(this.router.url);

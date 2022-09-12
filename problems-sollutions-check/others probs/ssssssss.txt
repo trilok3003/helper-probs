@@ -1,0 +1,48 @@
+  onRateChanges() {
+    let collections = [];
+    const date = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
+    this.ratesService.clear();
+    this.rates.forEach(ele => {
+      if (ele.hasOwnProperty('newDiscountIn') && ele.newDiscountIn) {
+        collections.push({
+          product: ele.product,
+          rate: ele.rates.discount.rate,
+          newDiscountIn: ele.newDiscountIn,
+          rateNeeded: ele.rates.discount.rateNeeded,
+          effectiveFrom: ele.rates.discount.rateNeeded ? ele.rates.discount.rateNeeded : ele.rates.discount.startDate,
+          rateValueType: 'in_rs'
+        })
+      }
+      if (ele.hasOwnProperty('newDiscountOut') && ele.newDiscountOut) {
+        collections.push({
+          product: ele.product,
+          rate: ele.rates.discount.rate,
+          newDiscountOut: ele.newDiscountOut,
+          rateNeeded: ele.rates.discount.rateNeeded,
+          effectiveFrom: ele.rates.discount.rateNeeded ? ele.rates.discount.rateNeeded : ele.rates.discount.startDate,
+          rateValueType : 'in_per'
+        })
+      }
+      if (ele.hasOwnProperty('newMarginIn') && ele.newMarginIn) {
+        collections.push({
+          product: ele.product,
+          rate: ele.rates.margin.rate,
+          newMarginIn: ele.newMarginIn,
+          rateNeeded: ele.rates.margin.rateNeeded,
+          effectiveFrom: ele.rates.margin.rateNeeded ? ele.rates.margin.rateNeeded : ele.rates.margin.startDate,
+          rateValueType: 'in_rs'
+        })
+      }
+      if (ele.hasOwnProperty('newMarginOut') && ele.newMarginOut) {
+        collections.push({
+          product: ele.product,
+          rate: ele.rates.margin.rate,
+          newMarginOut: ele.newMarginOut,
+          rateNeeded: ele.rates.margin.rateNeeded,
+          effectiveFrom: ele.rates.margin.rateNeeded ? ele.rates.margin.rateNeeded : ele.rates.margin.startDate,
+          rateValueType : 'in_per'
+        })
+      }
+    });
+    this.ratesService.setRateChanges(collections);
+  }

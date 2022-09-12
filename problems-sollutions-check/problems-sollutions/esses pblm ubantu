@@ -1,0 +1,4 @@
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH ### Add this to the end of the file ~/.profile
+source ~/.profile

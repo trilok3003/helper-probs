@@ -1,0 +1,84 @@
+in component 
+...................................
+export class UserComponent implements OnInit {
+     usersForm: FormGroup;
+     errorMessage : string;
+
+     constructor(private formBuilder: FormBuilder) {}
+
+      ngOnInit() {
+          this.usersForm= this.formBuilder.group({
+               users: this.formBuilder.array([
+                this.formBuilder.group({
+                  address: [null, [Validators.required]],
+                  phone: [null, [Validators.required]]
+                })
+              ])
+           });
+       }
+
+      initUserRow(): FormGroup {
+            return this.formBuilder.group({
+               address: [null, [Validators.required]],
+               phone: [null, [Validators.required]],
+        });
+       }
+
+       addUserRow(): void {
+          const usersArray= 
+             <FormArray>this.usersForm.controls['users'];
+           usersArray.push(this.initUserRow());
+        }
+
+       removeUserRow(rowIndex: number): void {
+           const usersArray= <FormArray>this.usersForm.controls['users'];
+           if (usersArray.length > 1) {
+              usersArray.removeAt(rowIndex);
+           } else {
+            this.errorMessage = 'You cannot delete this row! form should contain at least one row!';
+           setTimeout(() => {
+             this.errorMessage = null;
+           }, 4000);
+         }
+       }
+
+ }
+...............................................
+in view
+
+------------------------------
+<form *ngIf="usersForm" [formGroup]="usersForm" (ngSubmit)="createUsers()">
+    <table class="table table-sm table-bordered">
+            <thead>
+              <tr class="text-center">
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody formArrayName="users">
+              <tr *ngFor="let item of usersForm.controls.users.controls; let $index=index" [formGroupName]="$index">
+                <td style="min-width: 120px">
+                      <input class="form-control" type="text" formControlName="address"/>
+                      <div class="text-danger" *ngIf="usersForm.controls['users'].controls[$index].controls['address'].touched
+                         && usersForm.controls['users'].controls[$index].controls['address'].hasError('required')">
+                        Please enter address!
+                      </div>
+                </td>
+
+                <td style="min-width: 120px">
+                      <input class="form-control" type="text" formControlName="address"/>
+                      <div class="text-danger" *ngIf="usersForm.controls['users'].controls[$index].controls['phone'].touched
+                         && usersForm.controls['users'].controls[$index].controls['phone'].hasError('required')">
+                        Please enter phone number!
+                      </div>
+                </td>
+
+                <td style="width: 100px">
+                  <button (click)="addUserRow()" class="btn btn-success btn-sm mr-1" type="button"><i class="fa fa-plus"></i></button>
+                  <button (click)="removeUserRow($index)" class="btn btn-danger btn-sm" type="button"><i class="fa fa-times"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+</form>

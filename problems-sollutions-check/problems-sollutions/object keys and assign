@@ -1,0 +1,8 @@
+ // this.departmentWise = [];
+    // const dateWise = Object.keys(this.compensateLeaves[0]);
+    // dateWise.forEach(ele => {
+    //   this.departmentWise.push({
+    //     'department': ele,
+    //     'item': Object.assign(ele, this.compensateLeaves[0])[ele]
+    //   });
+    // });

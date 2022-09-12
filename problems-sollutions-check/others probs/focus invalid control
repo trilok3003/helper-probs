@@ -1,0 +1,11 @@
+for (const key of Object.keys(this.registrationForm.controls)) { if (this.registrationForm.controls[key].invalid) { const invalidControl = this.el.nativeElement.querySelector('[formcontrolname="' + key + '"]'); invalidControl.focus(); break; } }
+
+
+
+
+  getDayName(date) {
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+      'Saturday'];
+    const d = new Date(date);
+    return dayNames[d.getDay()];
+  }

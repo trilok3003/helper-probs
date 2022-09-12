@@ -1,0 +1,14 @@
+checkbox(item: any, event) {
+        if (event.ctrlKey) {
+            if (this.checkarray.find(x => x.ID == item.ID)) {
+                this.checkarray.splice(this.checkarray.indexOf(item), 1);
+            }
+            else {
+                this.checkarray.push(item);
+            }
+        }
+        else {
+            this.checkarray.splice(0);
+            this.checkarray.push(item);
+        }
+    }

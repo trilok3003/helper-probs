@@ -1,0 +1,9 @@
+ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
+
+cat ~/.ssh/id_rsa.pub
+
+
+Using Git with SSH keys
+https://kamarada.github.io/en/2019/07/14/using-git-with-ssh-keys/#.X367a50zbqQ
+
+

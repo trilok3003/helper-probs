@@ -1,0 +1,58 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="description" content="This is a code to draw a simple bar graph / chart on canvas - HTML5">
+<meta name="keywords" content="Canvas, Bar graph, HTML5, Graphics, HTML5 Graphics, Canvas Rectangle, fillRect, DreamsCoder, Graph, Graph using HTML, Graph using canvas, Bar Graph using HTML5">
+<meta name="author" content="Chinmay Mahajan">
+<title>  Creating a Simple Bar Graph on Canvas with Live example and Code [Explained in Video] | DreamsCoder </title>
+
+<script>
+    function draw() {
+        /* Accepting and seperating comma seperated values */
+        var n = document.getElementById("num").value;
+        var values = n.split(',');
+        
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        var width = 40; //bar width
+        var X = 50; // first bar position 
+        var base = 200;
+        
+        for (var i =0; i<values.length; i++) {
+            ctx.fillStyle = '#008080'; 
+            var h = values[i];
+            ctx.fillRect(X,canvas.height - h,width,h);
+            
+            X +=  width+15;
+            /* text to display Bar number */
+            ctx.fillStyle = '#4da6ff';
+            ctx.fillText('Bar '+i,X-50,canvas.height - h -10);
+        }
+            /* Text to display scale */
+            ctx.fillStyle = '#000000';
+            ctx.fillText('Scale X : '+canvas.width+' Y : '+canvas.height,800,10);
+  
+    }
+    function reset(){
+         var canvas = document.getElementById('myCanvas');
+         var ctx = canvas.getContext('2d');
+         ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+</script>
+</head> 
+<body align="center">
+<h1> Creating a Simple Bar Graph on Canvas with Live example and Code | DreamsCoder</h1>
+   <h3> Enter the values seperated by a comma</h3>
+    <input type="text" name="number" id="num"><br>
+    <input type="button" value="submit" name="submit" onclick="draw()">
+    <input type="button" value="Clear" name="Clear" onclick="reset()"><br><br>
+    <canvas id="myCanvas" width="900" height="500" style="border:1px solid #c3c3c3;">
+    </canvas>
+<h3>Video Explanation</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WwBT58l_8QA" frameborder="0" allowfullscreen=""></iframe>
+
+<h3>Code by DreamsCoder.com <a href="http://dreamscoder.com/viewprogram.php?id=117"> Source code </a></h3>
+
+
+
+</body></html>

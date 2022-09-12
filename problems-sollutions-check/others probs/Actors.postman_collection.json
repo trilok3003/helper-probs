@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "1cd13e72-f887-44df-9a86-a7b041631454",
+		"name": "Actors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Actors List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/actors/get-all-actors",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"actors",
+						"get-all-actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get This Actor Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/actors/get-all-actors?actor_id=90",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"actors",
+						"get-all-actors"
+					],
+					"query": [
+						{
+							"key": "actor_id",
+							"value": "90"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create An Actor and Send For Approval",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"profile\": {\n\t\t\"firstName\": \"Jitendr\",\n\t\t\"lastName\": \"Kumar\",\n\t\t\"aadharNumber\": \"225656123999\",\n\t\t\"gender\": \"MALE\",\n\t\t\"dateOfBirth\": \"1996-06-08\",\n\t\t\"email\": \"jitendr@gmail.com\",\n\t\t\"phoneNumber\": \"9611862209\",\n\t\t\"alternatePhoneNumber\": null,\n\t\t\"fatherName\": \"ASDF\",\n\t\t\"motherName\": \"ASDF\",\n\t\t\"maritalStatus\": \"SINGLE\",\n\t\t\"bloodGroup\": \"B+\"\n\t},\n\t\"validity\": \"24\",\n\t\"environments\": [\n\t\t{\n\t\t\t\"environment_id\": \"54\",\n\t\t\t\"env_type\" : \"STATE_HEAD_OFFICE\",\n\t\t\t\"roles\" : [\"9\", \"10\"],\n\t\t\t\"permissions\" : [\"121\"]\n\t\t},\n\t\t{\n\t\t\t\"environment_id\": \"55\",\n\t\t\t\"env_type\" : \"STATE_HEAD_OFFICE\",\n\t\t\t\"roles\" : [\"9\", \"10\"],\n\t\t\t\"permissions\" : [\"121\"]\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/actors/newactor",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"actors",
+						"newactor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Roles Of Company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-Id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/getrolesofcompany",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"getrolesofcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Permissions Of This Environment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-Id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "environment_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/getpermissionsofenv?environment_id=54",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"getpermissionsofenv"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "environment_id",
+							"value": "54"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign New Environment To Actor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-Id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"actor_id\" : \"12\",\n\t\"environment_id\" : \"2\",\n\t\"environment_type\": \"HEADQUARTER\",\n\t\"roles\": [22,13],\n\t\"permissions\": [5,6]\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/actors/assign-env-to-actor",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"actors",
+						"assign-env-to-actor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Add Roles For Actor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-Id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"actor_id\": \"12\",\n\t\"environment_id\": \"2\",\n\t\"environment_type\": \"HEADQUARTER\",\n\t\"roles\": [\"22\", \"11\"]\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/actors/updateactor/addroles",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"actors",
+						"updateactor",
+						"addroles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Environments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Env-Id",
+						"value": "10",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/getallenvironments",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"getallenvironments"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

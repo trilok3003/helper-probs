@@ -1,0 +1,2 @@
+<div class="progress-bar progress-bar-success" [ngStyle]="{ 'width': uploader.queue[0].progress + '%', 'height': '5px' }" tooltip="{{uploader.queue[0].progress}}% uploaded" placement="bottom"></div>
+

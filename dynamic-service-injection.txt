@@ -1,0 +1,9 @@
+  myService : MyService;
+  
+  constructor(private injector : Injector){
+    if(true){
+      this.myService = injector.get<MyService>(MyService);
+    }
+
+    console.log(this.myService.prop1)
+  }

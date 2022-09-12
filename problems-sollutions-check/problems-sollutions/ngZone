@@ -1,0 +1,5 @@
+constructor(private zone: NgZone) {
+    this.service.progress$.subscribe(progress => {
+        this.zone.run(() => this.uploadProgress = progress);
+    });
+}

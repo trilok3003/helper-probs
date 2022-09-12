@@ -1,0 +1,21 @@
+A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject doesn't hold a value.
+
+Subject example (with RxJS 5 API):
+
+const subject = new Rx.Subject();
+subject.next(1);
+subject.subscribe(x => console.log(x));
+Console output will be empty
+
+BehaviorSubject example:
+
+const subject = new Rx.BehaviorSubject();
+subject.next(1);
+subject.subscribe(x => console.log(x));
+Console output: 1
+
+In addition:
+
+BehaviorSubject can be created with initial value: new Rx.BehaviorSubject(1)
+Consider ReplaySubject if you want the subject to hold more than one value
+shareimprove this answer

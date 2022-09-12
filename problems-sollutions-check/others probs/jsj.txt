@@ -1,0 +1,6 @@
+public currentPerson;
+
+public setPerson = (person) => {
+  if (this.currentPerson === person) return;
+  this.currentPerson = person;
+}

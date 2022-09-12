@@ -1,0 +1,2 @@
+sudo chmod 766 -R /var/www/html
+sudo chmod -R 777 /var/www

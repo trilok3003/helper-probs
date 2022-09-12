@@ -1,0 +1,11 @@
+  goToRandomNumberPage(event) {
+    event.preventDefault();
+
+    this.router.navigateByUrl('/', {skipLocationChange: true})
+      .then(() => this.router.navigate(['/sameRoute']));
+  }
+
+
+RouterModule.forRoot(routes, {
+    onSameUrlNavigation: 'reload'
+})
