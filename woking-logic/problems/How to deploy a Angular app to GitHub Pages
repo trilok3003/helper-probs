@@ -1,0 +1,6 @@
+Step 1
+Push your angular app to a GitHub repository.
+step2: 
+ng add angular-cli-ghpages
+step3:  
+ng run AngularMine2019:deploy --base-href=/AngularMine2019/

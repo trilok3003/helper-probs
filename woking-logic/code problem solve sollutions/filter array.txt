@@ -1,0 +1,8 @@
+ 
+there are four way
+  (1)=> forEach
+  (2)=> for
+  (3)=> Set
+  (4)=>  Filter
+  const uniqueArray = Array.from(new Set(this.checkModels)); 
+  const uniqueArray = this.checkModels.filter((el, idx) => this.checkModels.indexOf(el) === idx);

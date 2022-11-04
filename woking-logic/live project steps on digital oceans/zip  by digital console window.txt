@@ -1,0 +1,2 @@
+step1: apt-get install zip
+step2: zip example2.zip *

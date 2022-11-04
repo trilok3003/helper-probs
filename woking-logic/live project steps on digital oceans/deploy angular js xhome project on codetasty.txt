@@ -1,0 +1,4 @@
+step1: upload zip file of like xhomeProject zip (upload this in www folder)
+step2: than unzip xhomeProject.zip
+step3:  rename xhomeProject to html (if html also present then change rename also )
+step4: run backend server if its present otherwise its run as it as

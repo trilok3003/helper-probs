@@ -1,0 +1,7 @@
+Share data between parent and child component.
+Share data between components using ViewChild.
+Share data between sibling components.
+Share data between components using service file.
+Share data through angular route.
+Create reusable component and pass data to component.
+Share data between non related components.

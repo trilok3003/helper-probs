@@ -1,0 +1,11 @@
+var someObject = {"someKey":"Some value in object"};
+
+if ("someKey" in someObject) {
+    //do stuff with someObject["someKey"]
+}
+
+var someArray = ["Some entry in array"];
+
+if (someArray.indexOf("Some entry in array") > -1) {
+    //do stuff with array
+}

@@ -1,0 +1,3 @@
+command to run the php server --> php -S 0.0.0.0:8089 -t ./
+
+in browser, enter IP address:port number (example: 142.93.76.114:8089)

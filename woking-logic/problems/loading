@@ -1,0 +1,47 @@
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class DataService {
+  constructor(private http: HttpClient) { }
+  getUsers() {
+    return this.http.get('https://jsonplaceholder.typicode.com/users')
+  } 
+}
+
+/* users.component.ts *
+
+import { Component, OnInit } from '@angular/core';
+import {DataService} from '../data.service';
+import { Observable } from 'rxjs';
+
+@Component({
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
+ })
+
+export class UsersComponent implements OnInit {
+  users: Object; // <-- Do not use $ at the end of a variable unless it is an observable
+  loading = true;
+  constructor(private data: DataService) { }
+  ngOnInit() {
+
+    this.data.getUsers().subscribe(data => {
+      this.users = data;
+      this.loading = false;
+    });
+  }
+}
+
+<div *ngIf="loading else loaded">
+    loading ...
+</div>
+
+<ng-template #loaded>
+    <div *ngFor="let user of users">{{user.name}}</div>
+</ng-template>

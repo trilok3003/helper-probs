@@ -1,0 +1,31 @@
+
+  var line = ele.querySelectorAll('line');
+    var path = ele.querySelectorAll('path');
+    var polyline  = ele.querySelectorAll('polyline');
+    var rect  = ele.querySelectorAll('rect');
+    var polygone  = ele.querySelectorAll('polygone');
+ /* line.forEach(element => {
+      this.renderer.setAttribute(element, 'stroke-linecap', '#round');
+      this.renderer.setAttribute(element, 'stroke-width', '0.25px');
+      this.renderer.setAttribute(element, 'stroke', '#404040');
+    });
+    path.forEach(element => {
+      this.renderer.setAttribute(element, 'stroke-linecap', '#round');
+      this.renderer.setAttribute(element, 'stroke-width', '0.25px');
+      this.renderer.setAttribute(element, 'stroke', '#404040');
+    });
+    polyline.forEach(element => {
+      this.renderer.setAttribute(element, 'stroke-linecap', '#round');
+      this.renderer.setAttribute(element, 'stroke-width', '0.25px');
+      this.renderer.setAttribute(element, 'stroke', '#404040');
+    });
+    rect.forEach(element => {
+      this.renderer.setAttribute(element, 'stroke-linecap', '#round');
+      this.renderer.setAttribute(element, 'fill', 'none');
+      this.renderer.setAttribute(element, 'stroke-width', '0.25px');
+      this.renderer.setAttribute(element, 'stroke', '#000');
+      this.renderer.setAttribute(element, 'stroke-dasharray', '3 3');
+    });
+    polygone.forEach(element => {
+      this.renderer.setAttribute(element, 'fill', '#fff');
+    });  */

@@ -1,0 +1,45 @@
+// Existing array.
+var array = [
+  { email: 'fooz@bar.co',
+    id: '0c2df03e-b12c-48a8-b52b-82d55425e283',
+    name: 'rob' },
+  { email: 'fooz@bar.co',
+    id: '1d763175-5369-4d25-8608-d6d04f630a60',
+    name: 'jane' },
+  { email: 'fooz@bar.co',
+    id: '16253b3e-1020-4431-91f3-d206072e142f',
+    name: 'mark' }
+]
+
+// New element.
+var newItem = {
+  email: 'fooz@bar.co',
+  id: '1d763175-5369-4d25-8608-d6d04f630a60',
+  name: 'janie'
+}
+
+// Id to look up for.
+var id = newItem.id
+
+// Find index of an item.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+// var index = array.findIndex(function(item) {return item.id === id})
+// Or:
+var index = array.findIndex(item => item.id === id)
+
+// Replace the item by index.
+array.splice(index, 1, newItem)
+
+// To check.
+console.log(array) // 'jane' is now 'janie'.
+
+// Another method to search for the index.
+var index = array.map(function(el) {
+  return el.id
+}).indexOf(id)
+
+// Delete  the item by index.
+array.splice(index, 1)
+
+// To check.
+console.log(array) // 'janie' is now gone.

@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <canvas id="pdf1" width="1200" height="400"></canvas>
+            <button type="button" onClick="changeBackground()">change	</button>
+
+        <script type="application/javascript">
+            function draw1() {
+                var canvas=document.getElementById("pdf1");
+                var pdf=canvas.getContext("2d");
+                var img = new Image;
+                img.onload = function(){ pdf.drawImage(img,0,0,canvas.width,canvas.height); };
+              //  img.src = "http://www.w3.org/TR/SVG11/images/painting/fillrule-evenodd.svg";
+                img.src = "./lumen.svg";
+
+            }
+
+
+
+function changeBackground(){
+	document.getElementById("pdf1").style.background = "url(./lumen-min.png)";
+}
+            draw1();
+
+            </script>
+    </body>
+</html>

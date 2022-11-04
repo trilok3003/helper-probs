@@ -1,0 +1,31 @@
+this.service.progress$.subscribe(progress => {
+    this.uploadProgress = progress;
+    this.cd.markForCheck();
+});
+
+ constructor(private cd: ChangeDetectorRef) {}
+
+
+@Component({
+  template: '{{counter}}',
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+class CartBadgeCmp {
+
+  @Input() addItemStream:Observable<any>;
+  counter = 0;
+
+  ngOnInit() {
+    this.addItemStream.subscribe(() => {
+      this.counter++; // application state changed
+    })
+  }
+}
+
+ngOnInit() {
+    this.addItemStream.subscribe(() => {
+      this.counter++; // application state changed
+      this.cd.markForCheck(); // marks path
+    })
+  }
+constructor(private cd: ChangeDetectorRef) {}

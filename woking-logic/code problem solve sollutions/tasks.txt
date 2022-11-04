@@ -1,0 +1,7 @@
+Role Based User
+    admin/read write de
+    guest /read..mp/ms/m
+    contribute--mp/ms/m/g
+Company logo propotional
+google sheet by default id and edit(link and commit)
+margtgage

@@ -1,0 +1,12 @@
+step1: create droplet 
+step2: choose image  like ubantu
+step3: choose plan
+step4: choose region
+step5: choose hostname as your chioce
+step6: create now
+step7: acccess console on top right side on three tick sign
+step8: open console window now
+step9: user- root,paswword: your mail on goes id
+step 10: enter user and password
+step 11: now reset passowrd
+step12:  and now work on it by cmd 

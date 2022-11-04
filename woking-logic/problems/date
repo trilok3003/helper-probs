@@ -1,0 +1,10 @@
+ getMonthEmployee(date) {
+   const info = date.split(',');
+    this.days = this.daysInMonth(info[0], info[1]);
+  }
+   daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+  }
+  monthDays(number){
+    return new Array(number);
+  }

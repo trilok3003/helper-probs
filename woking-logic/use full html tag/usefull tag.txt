@@ -1,0 +1,5 @@
+<details>
+<summary>
+https://stackblitz.com/edit/angular-details-summary-ex?file=src%2Fapp%2Fapp.component.html
+<pre>
+<strong>

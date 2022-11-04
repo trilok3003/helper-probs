@@ -1,0 +1,10 @@
+200 OK	The request has succeeded for GET, PUT, PATCH and DELETE requests.
+201 Created	The request has succeeded for POST requests.
+400 Bad Request	The request could not be understood by the API.
+401 Unauthorized	An error with authorization using a Google account or incorrect credentials for API if Basic Auth is enabled.
+402 Payment Required	Payment is required to process request.
+403 Forbidden	Action is forbidden.
+404 Not Found	The server has not found anything matching the request.
+429 Too Many Requests	Exhausted limit requests. Upgrade your plan.
+500 Internal Server Error	Server error. You should never see that ones. If you do please let us know.
+GET - All data

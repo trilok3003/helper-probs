@@ -1,0 +1,15 @@
+
+
+filterEmptyFields(data: any): any {    // Filter any fields that aren't empty & store in a new object - To be passed on the Pipe map's caller
+    let fields = {};
+    Object.keys(data).forEach(key =>  data[key] != '' ? fields[key] = data[key] : key);
+
+    return fields;   
+}
+
+trackEmptyFields(): void {
+    this.form
+      .valueChanges
+      .pipe(map(this.filterEmptyFields))
+      .subscribe(fields => console.log(fields));    
+}

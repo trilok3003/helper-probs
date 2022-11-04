@@ -1,0 +1,36 @@
+ var infox = this.pureData.filter(val => val.name === 'model1');
+    console.log(infox);
+
+
+
+removeDuplicates(arr){
+
+      let unique_array = []
+    
+  for(let i = 0;i < arr.length; i++){
+         
+ if(unique_array.indexOf(arr[i]) == -1){
+          
+    unique_array.push(arr[i])
+          }
+     
+ }
+    console.log(unique_array)
+  }
+
+
+
+info2 = info2.filter(function(val) {
+      return info1.indexOf(val) == -1;
+    });
+    console.log(info2)
+
+    info1 = info1.filter(val => !info2.includes(val));
+    console.log(info1)
+
+
+
+ console.log(this.bb)
+    let ids = this.bb.map(item => item._id);
+let filteredData = this.bb.filter(item => ids.indexOf(item.id) === -1);
+    console.log(filteredData)

@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <canvas id="pdf1" width="1200" height="400"></canvas>
+            <img id="SVG" style="display: none;" src="http://www.w3.org/TR/SVG11/images/painting/fillrule-evenodd.svg" 
+            alt="SVG Even-Odd Winding Rule Example" width="1200" height="400" />
+            <script type="application/javascript">
+                function draw1() {
+                    var canvas=document.getElementById("pdf1");
+                    var pdf=canvas.getContext("2d");
+                    pdf.drawImage(document.getElementById("SVG") ,0,0);
+                }
+                draw1();
+               </script>
+               
+    </body>
+</html>

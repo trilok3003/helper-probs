@@ -1,0 +1,38 @@
+How to activate the hash?
+To activate the hash we have two methods
+
+First method
+In app.module.ts
+We import
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+Then, we add this line in the NgModule as provider
+{provide: LocationStrategy, useClass: HashLocationStrategy}
+Example (app.module.ts):
+import { NgModule }       from '@angular/core';
+import { BrowserModule  } from '@angular/platform-browser';
+import { AppComponent }   from './app.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+@NgModule({
+    declarations: [AppComponent],
+    imports: [BrowserModule],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+    bootstrap: [AppComponent],
+})
+export class AppModule {}
+
+
+Second method
+We use RouterModule.forRoot with the argument {useHash: true}.
+Example: (app-routing.module.ts)
+import { NgModule } from '@angular/core';
+...
+const routes: Routes = [//routes in here];
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes, { useHash: true })
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

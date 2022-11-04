@@ -1,0 +1,2 @@
+step1: apt-get install unzip
+step2: unzip screenshot.zip

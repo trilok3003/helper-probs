@@ -1,0 +1,14 @@
+step:  check ssh key in system
+    cat ~/.ssh/id_rsa.pub
+step: create ssh in system
+    ssh-keygen -t rsa -C "email id"
+step: copy and paste in git lab
+step: git repository init
+     git init 
+     git remote add origin <gitlab ssh clone url>
+     git add . 
+     git commit
+     git push -u origin master
+step: git repository
+      git remote -v
+      git remote set-url origin git@gitlab.com:gaiasys/angular-frontend.git

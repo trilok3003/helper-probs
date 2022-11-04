@@ -1,0 +1,21 @@
+$ ng generate component _components/Profile
+$ ng generate component _components/Profile/Personal
+$ ng generate component _components/Profile/Address
+$ ng generate component _components/Profile/Password
+ 
+$ ng generate component _components/Leaves
+$ ng generate component _components/Leaves/Apply
+$ ng generate component _components/Leaves/Casual
+$ ng generate component _components/Leaves/Earned
+ 
+$ ng generate class _classes/User
+ 
+$ ng generate directive _directives/modifyText
+ 
+$ ng generate guard _guards/Auth
+ 
+$ ng generate pipe _pipes/filterUser
+ 
+$ ng generate interface _interfaces/Profile
+ 
+$ ng generate service _services/HttpService

@@ -1,0 +1,13 @@
+Use the Array.filter() method:
+
+myArray = myArray.filter( function( el ) {
+  return toRemove.indexOf( el ) < 0;
+} );
+Small improvement, as browser support for Array.includes() has increased:
+
+myArray = myArray.filter( function( el ) {
+  return !toRemove.includes( el );
+} );
+Next adaptation using arrow functions:
+
+myArray = myArray.filter( ( el ) => !toRemove.includes( el ) );

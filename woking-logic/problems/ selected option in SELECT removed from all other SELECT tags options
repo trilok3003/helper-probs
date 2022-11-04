@@ -1,0 +1,30 @@
+<select [ngModel]='currValue'
+        (change)="update($event.target.value, i, $event.target.options.selectedIndex)"
+         name="{{i}}"
+         #select>
+                <option *ngFor="let currItem of items | distinctValue: selectedList: select.value: i: currValue; let j=index"
+                        value="{{currItem}}">{{currItem}}</option>
+</select>
+
+transform(itemsList: any, filtersList: any, excludeItem: any, row: any, currItem: any) {
+
+  return itemsList.filter(function(option:any) {
+      let keepItem: boolean = true;
+      let currFilter: number = 0;
+
+      // Check if the option should be filtered
+      while ((keepItem) && (currFilter < filtersList.length)) {
+
+        // If option exists in filters list and not this item
+        if ( (option.fieldname != currItem.fieldname)
+              (option.fieldname != excludeItem.fieldname) &&
+              (option.fieldname == filtersList[currFilter].fieldname) ) {
+            keepItem = false;
+        }
+
+        currFilter++;
+      }
+
+      return keepItem;
+    });
+}

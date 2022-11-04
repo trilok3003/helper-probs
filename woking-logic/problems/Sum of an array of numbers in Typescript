@@ -1,0 +1,12 @@
+
+var shoppingListItems = [
+    {name: "Milk", number: 100},
+    {name: "Sugar", number: 22},
+    {name: "Bread", number: 12}
+];
+
+// creates an array of the `number` property: [100, 22, 12]
+var numbers = shoppingListItems.map(i => i.number);
+
+// gets the sum of the array of numbers: 134
+var sum = numbers.reduce((a, b) => a + b, 0);

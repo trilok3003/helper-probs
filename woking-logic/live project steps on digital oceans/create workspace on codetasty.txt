@@ -1,0 +1,6 @@
+step1: goest on right home 
+step2: create workspace on left side
+step3: enter user:root
+step4:password: your droplet server
+step5: enter droplet server ip
+step6: now save

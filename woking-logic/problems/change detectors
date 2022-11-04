@@ -1,0 +1,6 @@
+constructor(private ref: ChangeDetectorRef) {
+    ref.detach();
+    setInterval(() => {
+      this.ref.detectChanges();
+    }, 5000);
+  }
