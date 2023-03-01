@@ -10,5 +10,5 @@ git config user.name "xyz"
 > git config user.email
 # Globally set email-address (only used when nothing is set locally)
   ## following command
-> git config --global user.email "your_email@abc.example"
-> git config --global user.email  
+> git config --global user.name "your_name"
+> git config --global user.name  
