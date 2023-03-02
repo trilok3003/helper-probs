@@ -125,3 +125,31 @@ https://stackblitz.com/edit/angular-details-summary-ex?file=src%2Fapp%2Fapp.comp
 <pre>
 <strong>
 
+# angular animation 
+https://stackblitz.com/angular/nnrardeljdl?file=src%2Fapp%2Fhero-list-page.component.ts
+# angular stack
+https://www.freakyjolly.com/angular-7-6-add-debounce-time-using-rxjs-6-x-x-to-optimize-search-input-for-api-results-from-server/
+https://scotch.io/tutorials/3-useful-typescript-tips-for-angular
+
+
+# angular agm 
+https://www.freakyjolly.com/angular-7-6-add-google-maps-in-angular-2-plus-applications-using-angular-google-maps-module-agm-core-easily/
+
+# todo
+https://artemsky.github.io/ng-snotify/documentation/essentials/styling.html
+https://www.typescriptlang.org/docs/handbook/enums.html
+https://medium.com/front-end-weekly/es6-map-vs-object-what-and-when-b80621932373
+https://stackblitz.com/edit/ng-state-store?file=src%2Fapp%2Fstore.class.ts
+https://github.com/skr571999?tab=repositories
+https://medium.com/@eliasmsedano/angular-4-how-to-check-authorization-based-on-role-and-entity-states-cf0282280961
+
+
+
+https://devblogs.microsoft.com/premier-developer/angular-how-to-implement-role-based-security/
+https://medium.com/@hamedbaatour/build-a-real-world-beautiful-web-app-with-angular-6-a-to-z-ultimate-guide-2018-part-i-e121dd1d55e
+https://auth0.com/blog/real-world-angular-series-part-3/
+https://auth0.com/blog/real-world-angular-series-part-1/
+
+https://www.freakyjolly.com/angular-nested-routing-with-multiple-routeroutlet-using-loadchildren-having-own-router-modules-example-application/
+
+
