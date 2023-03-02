@@ -33,6 +33,26 @@ https://stackblitz.com/edit/github-jf2c9c?file=src%2F5-useArray%2FuseArray.js
 https://stackblitz.com/@rgunczer
 https://www.ngdevelop.tech/angular/history/
 
+https://stackblitz.com/edit/custom-notifications-module?file=src%2Fapp%2Fnotifications%2Fnotification%2Fnotification.component.html
+
+https://stackblitz.com/edit/angular-pausable-notifications-3
+
+https://stackblitz.com/edit/angular-hello-animations?file=src%2Fapp%2Fhello.component.ts
+
+https://stackblitz.com/edit/grid-layout-exploration?file=src%2Fapp%2Fapp.component.css
+
+https://stackblitz.com/edit/angular-content-editable-directive?file=src%2Fapp%2Feditable-section.component.html
+
+https://stackblitz.com/edit/the-angular-express?file=src%2Fapp%2Fanimal%2Fservice%2Fanimal-store.service.ts
+
+https://stackblitz.com/edit/angularfirebase-78-hammerjs-angular-animations?file=app%2Fhammer-card%2Fhammer-card.component.ts
+https://stackblitz.com/edit/angular-filter-pipe-count?file=app%2Ffilter-list.pipe.ts
+
+https://stackblitz.com/edit/angular-carousel-component-ubhsk3?file=app%2Fcarousel.component.ts
+
+https://stackblitz.com/edit/dynamic-ng-content-gk7sj7?file=src%2Fapp%2Fapp.component.ts
+
+
 
 
 http://16honeys.com/
@@ -127,9 +147,27 @@ https://stackblitz.com/edit/angular-details-summary-ex?file=src%2Fapp%2Fapp.comp
 
 # angular animation 
 https://stackblitz.com/angular/nnrardeljdl?file=src%2Fapp%2Fhero-list-page.component.ts
+https://medium.com/@onejohi/angular-7-animations-eef6410f2492
+
 # angular stack
 https://www.freakyjolly.com/angular-7-6-add-debounce-time-using-rxjs-6-x-x-to-optimize-search-input-for-api-results-from-server/
 https://scotch.io/tutorials/3-useful-typescript-tips-for-angular
+
+https://www.freakyjolly.com/angular-6-7-adding-toastr-messages-in-angular-4-web-application-in-few-steps/
+
+http://blog.w3radar.com/create-a-timeline-flow-component-with-angular/
+
+https://www.freakyjolly.com/angular-7-8-httpclient-service-tutorial-to-consume-restfull-api-from-server/
+
+https://github.com/ipsjolly/FreakyJolly.com/tree/master/Demo/Angular/Angular_ShareDataExample_Using_Input_Decorator
+
+https://github.com/ipsjolly/FreakyJolly.com/tree/master/Demo/Angular/PassDataBetweenComponentsAngular6Example
+
+https://www.techiediaries.com/angular-file-upload-progress-bar/
+
+https://firstclassjs.com/display-a-loader-on-every-http-request-using-interceptor-in-angular-7/
+
+https://github.com/ipsjolly/FreakyJolly.com/tree/master/Demo/Angular/Angular5Filters
 
 
 # angular agm 
@@ -152,4 +190,43 @@ https://auth0.com/blog/real-world-angular-series-part-1/
 
 https://www.freakyjolly.com/angular-nested-routing-with-multiple-routeroutlet-using-loadchildren-having-own-router-modules-example-application/
 
+# angular github deploy
+https://dzone.com/articles/how-to-deploy-an-angular-application-to-github
+https://itnext.io/create-your-website-for-free-with-github-pages-angular-4a932a2de309
 
+# angular interceptors
+https://www.freakyjolly.com/angular-7-6-handle-http-request-and-response-using-interceptors-in-angular-4-3-plus-versions/
+# angular firebase
+https://www.freakyjolly.com/angular-7-6-crud-operations-using-firebase-and-firestore-database-in-angular-application-tutorial/
+
+# 45
+https://javascript.info/keys-values-entries
+https://www.talkingdotnet.com/angular/
+
+
+# 34
+
+https://blog.bitsrc.io/component-reusability-techniques-with-angular-727a6c603ad2
+
+https://stackblitz.com/edit/angular-component-reusability-techniques?embed=1&file=src%2Fapp%2Fapp.component.html&source=post_page-----727a6c603ad2----------------------
+
+https://blog.bitsrc.io/component-inheritance-in-angular-acd1215d5dd8
+
+https://medium.com/@luukgruijs/understanding-rxjs-map-mergemap-switchmap-and-concatmap-833fc1fb09ff
+https://medium.com/@luukgruijs/understanding-rxjs-subjects-339428a1815b
+
+https://ultimatecourses.com/blog/understand-angulars-hierarchical-dependency-injection-system
+
+https://ultimatecourses.com/blog/angular-animations-how-to-animate-lists
+
+https://blog.bitsrc.io/understanding-change-detection-strategies-in-angular-d4ca7744085a
+
+https://stackblitz.com/edit/angular-irrsv8?file=src%2Fstyles.css
+https://coryrylan.com/blog/theming-angular-apps-with-css-custom-properties
+
+
+https://coryrylan.com/blog/tree-shakeable-providers-and-services-in-angular
+https://coryrylan.com/blog/angular-progress-component-with-svg
+https://coryrylan.com/blog/creating-a-custom-debounce-click-directive-in-angular
+
+https://www.amadousall.com/angular-routing-how-to-display-a-loading-indicator-when-navigating-between-routes/

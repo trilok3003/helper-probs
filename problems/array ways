@@ -43,3 +43,7 @@ array.splice(index, 1)
 
 // To check.
 console.log(array) // 'janie' is now gone.
+
+this.numbers = Array(5).fill().map((x,i)=>i); // [0,1,2,3,4]
+this.numbers = Array(5).fill(4); // [4,4,4,4,4]
+
