@@ -230,3 +230,27 @@ https://coryrylan.com/blog/angular-progress-component-with-svg
 https://coryrylan.com/blog/creating-a-custom-debounce-click-directive-in-angular
 
 https://www.amadousall.com/angular-routing-how-to-display-a-loading-indicator-when-navigating-between-routes/
+
+https://blog.bitsrc.io/component-reusability-techniques-with-angular-727a6c603ad2
+
+https://stackblitz.com/edit/angular-component-reusability-techniques?embed=1&file=src%2Fapp%2Fapp.component.html&source=post_page-----727a6c603ad2----------------------
+
+https://blog.bitsrc.io/component-inheritance-in-angular-acd1215d5dd8
+
+https://medium.com/@luukgruijs/understanding-rxjs-map-mergemap-switchmap-and-concatmap-833fc1fb09ff
+https://medium.com/@luukgruijs/understanding-rxjs-subjects-339428a1815b
+
+https://ultimatecourses.com/blog/understand-angulars-hierarchical-dependency-injection-system
+
+https://ultimatecourses.com/blog/angular-animations-how-to-animate-lists
+
+https://coryrylan.com/blog/tree-shakeable-providers-and-services-in-angular
+https://coryrylan.com/blog/angular-progress-component-with-svg
+https://coryrylan.com/blog/creating-a-custom-debounce-click-directive-in-angular
+
+https://stackblitz.com/edit/angular-irrsv8?file=src%2Fstyles.css
+https://coryrylan.com/blog/theming-angular-apps-with-css-custom-properties
+
+https://blog.bitsrc.io/understanding-change-detection-strategies-in-angular-d4ca7744085a
+
+https://www.amadousall.com/angular-routing-how-to-display-a-loading-indicator-when-navigating-between-routes/
