@@ -254,3 +254,5 @@ https://coryrylan.com/blog/theming-angular-apps-with-css-custom-properties
 https://blog.bitsrc.io/understanding-change-detection-strategies-in-angular-d4ca7744085a
 
 https://www.amadousall.com/angular-routing-how-to-display-a-loading-indicator-when-navigating-between-routes/
+https://stackblitz.com/edit/angular-carousel-component-ubhsk3?file=app%2Fcarousel.component.ts
+https://stackblitz.com/edit/angular-bootstrap-cdk?file=src%2Fapp%2Fapp.module.ts
