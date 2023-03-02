@@ -1,1 +1,0 @@
-<p *ngFor="let model of models |slice:0:[max]">

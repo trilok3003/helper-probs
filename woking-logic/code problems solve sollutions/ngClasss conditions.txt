@@ -1,2 +1,0 @@
-
-[ngClass]="v_2? 'show' : 'hidden'"

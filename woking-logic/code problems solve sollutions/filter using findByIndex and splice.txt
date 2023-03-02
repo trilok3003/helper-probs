@@ -1,4 +1,0 @@
-this.xCommunity.models.forEach(ele=>{
-    const index = this.xCommunity.models.findIndex(res => res.model.name === ele.model.name);
-    this.xCommunity.models.splice(index, 1);
-  })

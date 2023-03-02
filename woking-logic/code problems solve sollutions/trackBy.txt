@@ -1,5 +1,0 @@
-<p *ngFor="let model of models;trackBy:trackFn">
-
-trackFn(index:number,item){
-return item.id
-}

@@ -1,4 +1,0 @@
-step1: run setup
-step2: open cmd as admin on path C:\Program Files\MongoDB\Server\3.2\bin
-step3: mongod --dbpath E:\mongodbBackUp
-or step3: mongod --dbpath C:\data\db  than use only mongod for running server

@@ -1,2 +1,0 @@
-https://www.freecodecamp.org/news/best-practices-for-react/
-https://www.freecodecamp.org/news/react-interview-questions-to-know/

@@ -1,4 +1,0 @@
-https://jasonwatmore.com/post/2018/11/07/angular-7-reactive-forms-validation-example
-https://medium.com/@kmathy/angular-manipulate-properly-the-dom-with-renderer-16a756508cba
-https://netbasal.com/event-emitters-in-angular-13e84ee8d28c
-https://ngrefs.com/en/latest/core/providers
