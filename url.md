@@ -256,3 +256,5 @@ https://blog.bitsrc.io/understanding-change-detection-strategies-in-angular-d4ca
 https://www.amadousall.com/angular-routing-how-to-display-a-loading-indicator-when-navigating-between-routes/
 https://stackblitz.com/edit/angular-carousel-component-ubhsk3?file=app%2Fcarousel.component.ts
 https://stackblitz.com/edit/angular-bootstrap-cdk?file=src%2Fapp%2Fapp.module.ts
+
+https://stackblitz.com/edit/dynamic-ng-content-gk7sj7?file=src%2Fapp%2Fapp.component.ts
