@@ -1,8 +1,0 @@
-<div *ngIf="chartData.length">
-    {{chartMethod()}}
-</div>
-But it will add an undefined in html so just test
-
-<div *ngIf="chartData.length">
-    {{chartMethod() ? chartMethod() : ""}}
-</div>
